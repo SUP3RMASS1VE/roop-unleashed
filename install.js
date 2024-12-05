@@ -28,6 +28,12 @@ module.exports = {
           "pip install -r requirements.txt"
         ]
       }
+    },
+    {
+      method: "fs.link",
+      params: {
+        venv: "app/env"
+      }
     }
   ]
 }
