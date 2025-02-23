@@ -6,7 +6,7 @@ module.exports = {
       "params": {
         "venv": "{{args && args.venv ? args.venv : null}}",
         "path": "{{args && args.path ? args.path : '.'}}",
-        "message": "pip install torch==2.1.2 torchvision==0.16.2 {{args && args.xformers ? 'xformers' : ''}} --index-url https://download.pytorch.org/whl/cu118"
+        "message": "uv pip install torch==2.1.2 torchvision==0.16.2 {{args && args.xformers ? 'xformers' : ''}} --index-url https://download.pytorch.org/whl/cu118"
       }
     },
     // windows amd
@@ -16,7 +16,7 @@ module.exports = {
       "params": {
         "venv": "{{args && args.venv ? args.venv : null}}",
         "path": "{{args && args.path ? args.path : '.'}}",
-        "message": "pip install torch-directml torchvision numpy==1.26.4"
+        "message": "uv pip install torch-directml torchvision numpy==1.26.4"
       }
     },
     // windows cpu
@@ -26,7 +26,7 @@ module.exports = {
       "params": {
         "venv": "{{args && args.venv ? args.venv : null}}",
         "path": "{{args && args.path ? args.path : '.'}}",
-        "message": "pip install torch==2.1.2 torchvision==0.16.2 --index-url https://download.pytorch.org/whl/cpu"
+        "message": "uv pip install torch==2.1.2 torchvision==0.16.2 --index-url https://download.pytorch.org/whl/cpu"
       }
     },
     // mac
@@ -36,7 +36,7 @@ module.exports = {
       "params": {
         "venv": "{{args && args.venv ? args.venv : null}}",
         "path": "{{args && args.path ? args.path : '.'}}",
-        "message": "pip install torch==2.1.2 torchvision==0.16.2"
+        "message": "uv pip install torch==2.1.2 torchvision==0.16.2"
       }
     },
     // linux nvidia
@@ -46,7 +46,7 @@ module.exports = {
       "params": {
         "venv": "{{args && args.venv ? args.venv : null}}",
         "path": "{{args && args.path ? args.path : '.'}}",
-        "message": "pip install torch==2.1.2 torchvision==0.16.2 {{args && args.xformers ? 'xformers' : ''}} --index-url https://download.pytorch.org/whl/cu118"
+        "message": "uv pip install torch==2.1.2 torchvision==0.16.2 {{args && args.xformers ? 'xformers' : ''}} --index-url https://download.pytorch.org/whl/cu118"
       }
     },
     // linux rocm (amd)
@@ -56,7 +56,7 @@ module.exports = {
       "params": {
         "venv": "{{args && args.venv ? args.venv : null}}",
         "path": "{{args && args.path ? args.path : '.'}}",
-        "message": "pip install torch==2.1.2 torchvision==0.16.2 --index-url https://download.pytorch.org/whl/rocm5.6"
+        "message": "uv pip install torch==2.1.2 torchvision==0.16.2 --index-url https://download.pytorch.org/whl/rocm5.6"
       }
     },
     // linux cpu
@@ -66,7 +66,7 @@ module.exports = {
       "params": {
         "venv": "{{args && args.venv ? args.venv : null}}",
         "path": "{{args && args.path ? args.path : '.'}}",
-        "message": "pip install torch==2.1.2 torchvision==0.16.2 --index-url https://download.pytorch.org/whl/cpu"
+        "message": "uv pip install torch==2.1.2 torchvision==0.16.2 --index-url https://download.pytorch.org/whl/cpu"
       }
     }
   ]
