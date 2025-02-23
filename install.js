@@ -5,7 +5,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/C0untFloyd/roop-unleashed app"
+          "git clone https://github.com/SUP3RMASS1VE/RoopUnleashed app"
         ]
       }
     },
