@@ -5,7 +5,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/SUP3RMASS1VE/RoopUnleashed app"
+          "git clone https://github.com/6Morpheus6/RoopUnleashed app"
         ]
       }
     },
@@ -27,12 +27,6 @@ module.exports = {
         message: [
           "uv pip install -r requirements.txt"
         ]
-      }
-    },
-    {
-      method: "fs.link",
-      params: {
-        venv: "app/env"
       }
     }
   ]
