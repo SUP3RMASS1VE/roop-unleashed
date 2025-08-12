@@ -2,7 +2,7 @@ module.exports = {
   run: [
     // windows nvidia 50 series
     {
-      "when": "{{platform === 'win32' && gpu === 'nvidia' && kernel.gpus && kernel.gpus.find(x => / 50.+/.test(x.model))}}",
+      "when": "{{platform === 'win32' && gpu === 'nvidia'}}",
       "method": "shell.run",
       "params": {
         "venv": "{{args && args.venv ? args.venv : null}}",
@@ -13,19 +13,6 @@ module.exports = {
         ]
       },
       "next": null
-    },
-    // windows nvidia
-    {
-      "when": "{{platform === 'win32' && gpu === 'nvidia'}}",
-      "method": "shell.run",
-      "params": {
-        "venv": "{{args && args.venv ? args.venv : null}}",
-        "path": "{{args && args.path ? args.path : '.'}}",
-        "message": [
-          "uv pip install torch==2.1.2 torchvision==0.16.2 {{args && args.xformers ? 'xformers' : ''}} --index-url https://download.pytorch.org/whl/cu118",
-          "uv pip install onnxruntime-gpu==1.17.1"
-        ]
-      }
     },
     // windows amd
     {
@@ -81,7 +68,7 @@ module.exports = {
     },
     // linux nvidia 50 series
     {
-      "when": "{{platform === 'linux' && gpu === 'nvidia' && kernel.gpus && kernel.gpus.find(x => / 50.+/.test(x.model))}}",
+      "when": "{{platform === 'linux' && gpu === 'nvidia'}}",
       "method": "shell.run",
       "params": {
         "venv": "{{args && args.venv ? args.venv : null}}",
@@ -92,19 +79,6 @@ module.exports = {
         ]
       },
       "next": null
-    },
-    // linux nvidia
-    {
-      "when": "{{platform === 'linux' && gpu === 'nvidia'}}",
-      "method": "shell.run",
-      "params": {
-        "venv": "{{args && args.venv ? args.venv : null}}",
-        "path": "{{args && args.path ? args.path : '.'}}",
-        "message": [
-          "uv pip install torch==2.1.2 torchvision==0.16.2 {{args && args.xformers ? 'xformers' : ''}} --index-url https://download.pytorch.org/whl/cu118",
-          "uv pip install onnxruntime-gpu==1.17.1"
-        ]
-      }
     },
     // linux rocm (amd)
     {
