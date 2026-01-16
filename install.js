@@ -1,11 +1,23 @@
 module.exports = {
+  requires: {
+    bundle: "ai",
+  },
   run: [
-    // Edit this step to customize the git repository to use
     {
       method: "shell.run",
       params: {
         message: [
           "git clone https://github.com/SUP3RMASS1VE/RoopUnleashed app"
+        ]
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
+        venv: "env",
+        path: "app",
+        message: [
+          "uv pip install -r requirements.txt"
         ]
       }
     },
@@ -17,16 +29,6 @@ module.exports = {
         venv: "env",
         path: "app",
         }
-      }
-    },
-    {
-      method: "shell.run",
-      params: {
-        venv: "env",
-        path: "app",
-        message: [
-          "uv pip install -r requirements.txt"
-        ]
       }
     }
   ]
